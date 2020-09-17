@@ -16,6 +16,7 @@
 # Ef hreyfing er ekki möguleg á að prentast út "Not a valid direction!" og biðja um nýja átt
 # Þegar komið er á reit 3,1 prentast út "Victory!" og forrit klárast.
 # Input frá leikmanni getur verið bæði hástafur eða lágstafur
+# https://github.com/DanielGestur/Tile-Traveller/blob/master/TileTraveller.py
 
 NORTH = "n" or "N"
 EAST = "e" or "E"
@@ -70,6 +71,5 @@ def victory():
     ''' The player has won the game '''
     if column == 3 and row == 1:
         print("Victory!")
-
 
 
