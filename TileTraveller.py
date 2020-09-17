@@ -50,6 +50,8 @@ def possible_directions(column, row):
     elif column == 3 and row == 3: 
         valid_directions = SOUTH + WEST
         print("You can travel: (S)outh or (W)est.")
+    else:
+        pass
     return valid_directions
 
 def position(user_input, column, row):
@@ -72,13 +74,16 @@ def victory(column, row):
 
 column = 1
 row = 1
-victory = victory(column, row)
+victory = False
+# valid_directions = NORTH
+# possible_directions(column, row)
 
-while victory != True:
+
+while not victory:
     if victory == True:
         print(victory)
     else:
-        valid_direction = possible_directions(column, row)
+        valid_directions = possible_directions(column, row)
         user_input = input("Direction: ")
         column, row = position(user_input, column, row)
 
