@@ -55,8 +55,17 @@ def possible_directions(column, row):
 #     print("You can travel: ", end="")
 
 def position():
-    pass
+    if user_input == NORTH:
+        row += 1
+    elif user_input == EAST:
+        column += 1
+    elif user_input == WEST:
+        column -= 1
+    elif user_input == SOUTH:
+        row -= 1
 
 def victory():
     pass
 
+possible_directions(column, row)
+user_input = input("Direction: ")
