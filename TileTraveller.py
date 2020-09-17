@@ -17,26 +17,28 @@
 # Þegar komið er á reit 3,1 prentast út "Victory!" og forrit klárast.
 # Input frá leikmanni getur verið bæði hástafur eða lágstafur
 
-# def first_location():
-#     location = (1,1)
-#     return location
+NORTH = "n"
+EAST = "e"
+SOUTH = "s"
+WEST = "w"
+
 
 def possible_directions(col, row):
-    if col == 1 and row == 1:   # (1,1)
+    if col == 1 and row == 1:   # location (1,1)
         valid_directions = NORTH
-    elif col == 1 and row == 2: # (1,2)
+    elif col == 1 and row == 2: # location (1,2)
         valid_directions = NORTH+EAST+SOUTH
-    elif col == 1 and row == 3: # (1,3)
+    elif col == 1 and row == 3: # location (1,3)
         valid_directions = EAST+SOUTH
-    elif col == 2 and row == 1: # (2,1)
+    elif col == 2 and row == 1: # location (2,1)
         valid_directions = NORTH
-    elif col == 2 and row == 2: # (2,2)
+    elif col == 2 and row == 2: # location (2,2)
         valid_directions = SOUTH+WEST
-    elif col == 2 and row == 3: # (2,3)
+    elif col == 2 and row == 3: # location (2,3)
         valid_directions = EAST+WEST
-    elif col == 3 and row == 2: # (3,2)
+    elif col == 3 and row == 2: # location (3,2)
         valid_directions = NORTH+SOUTH
-    elif col == 3 and row == 3: # (3,3)
+    elif col == 3 and row == 3: # location (3,3)
         valid_directions = SOUTH+WEST
     return valid_directions
 
