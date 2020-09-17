@@ -36,7 +36,9 @@ def possible_directions():
             print("(W)est")
     return possible_directions
 
-def direction()
+def direction():
+    direction_input = input("Directions: ")
+    return direction_input
 
 def position():
     pass
