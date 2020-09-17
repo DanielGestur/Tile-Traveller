@@ -31,25 +31,25 @@ def possible_directions(column, row):
         valid_directions = NORTH
         print("You can travel: (N)orth.")
     elif column == 1 and row == 2:
-        valid_directions = NORTH+EAST+SOUTH
+        valid_directions = NORTH + EAST + SOUTH
         print("You can travel: (N)orht or (E)ast or (S)outh.")
     elif column == 1 and row == 3:
-        valid_directions = EAST+SOUTH
+        valid_directions = EAST + SOUTH
         print("You can travel: (E)ast or (S)outh.")
     elif column == 2 and row == 1: 
         valid_directions = NORTH
         print("You can travel: (N)orth.")
     elif column == 2 and row == 2: 
-        valid_directions = SOUTH+WEST
+        valid_directions = SOUTH + WEST
         print("You can travel: (S)outh or (W)est.")
     elif column == 2 and row == 3: 
-        valid_directions = EAST+WEST
+        valid_directions = EAST + WEST
         print("You can travel: (E)ast or (W)est.")
     elif column == 3 and row == 2: 
-        valid_directions = NORTH+SOUTH
+        valid_directions = NORTH + SOUTH
         print("You can travel: (N)orth or (S)outh.")
     elif column == 3 and row == 3: 
-        valid_directions = SOUTH+WEST
+        valid_directions = SOUTH + WEST
         print("You can travel: (S)outh or (W)est.")
     return valid_directions
 
@@ -63,10 +63,11 @@ def position():
         column -= 1
     elif user_input == SOUTH:
         row -= 1
+    return row, column
 
 def victory():
     if column == 3 and row == 1:
         print("Victory!")
 
-possible_directions(column, row)
-user_input = input("Direction: ")
+
+
