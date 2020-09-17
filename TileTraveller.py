@@ -56,13 +56,13 @@ def possible_directions(column, row):
 
 def position():
     ''' Changes the player position after play is chosen '''
-    if user_input == NORTH:
+    if direction_input == NORTH:
         row += 1
-    elif user_input == EAST:
+    elif direction_input == EAST:
         column += 1
-    elif user_input == WEST:
+    elif direction_input == WEST:
         column -= 1
-    elif user_input == SOUTH:
+    elif direction_input == SOUTH:
         row -= 1
     return row, column
 
