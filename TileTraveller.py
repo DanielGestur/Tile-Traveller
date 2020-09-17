@@ -17,7 +17,8 @@
 # Þegar komið er á reit 3,1 prentast út "Victory!" og forrit klárast.
 
 def first_location():
-    pass
+    location = (1,1)
+    return location
 
 def possible_directions():
     pass
