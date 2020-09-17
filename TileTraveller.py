@@ -26,7 +26,7 @@ column = 1
 row = 1
 
 def possible_directions(column, row):
-    # Check the position of the player and print out the valid direction that the player can go.
+    ''' Check the position of the player and print out the valid direction that the player can go. '''
     if column == 1 and row == 1:
         valid_directions = NORTH
         print("You can travel: (N)orth.")
@@ -55,6 +55,7 @@ def possible_directions(column, row):
 
 
 def position():
+    ''' Changes the player position after play is chosen '''
     if user_input == NORTH:
         row += 1
     elif user_input == EAST:
@@ -66,6 +67,7 @@ def position():
     return row, column
 
 def victory():
+    ''' The player has won the game '''
     if column == 3 and row == 1:
         print("Victory!")
 
