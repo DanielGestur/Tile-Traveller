@@ -23,8 +23,6 @@ EAST = "e" or "E"
 SOUTH = "s" or "S"
 WEST = "w" or "W"
 # Column + row make one tile, our first tile is (1,1)
-# COLUMN = 1
-# ROW = 1
 
 def possible_directions(column, row):
     ''' Check the position of the player and print out the valid direction that the player can go. '''
@@ -54,7 +52,7 @@ def possible_directions(column, row):
         print("You can travel: (S)outh or (W)est.")
     return valid_directions
 
-def position(direction, column, row):
+def position(user_input, column, row):
     ''' Changes the player position after play is chosen '''
     if user_input == NORTH:
         row += 1
@@ -70,17 +68,18 @@ def position(direction, column, row):
 
 def victory(column, row):
     ''' The player has won the game '''
-    if column == 3 and row == 1:
-        print("Victory!")
+    return column == 3 and row == 1
 
 column = 1
 row = 1
+victory = victory(column, row)
 
 while victory != True:
-    valid_directions = possible_directions(column, row)
-    user_input = input("Direction: ")
-    print(valid_directions)
-    column, row =position(user_input, column, row)
-    
-if victory == True:
-    victory(column, row)
+    if victory == True:
+        print(victory)
+    else:
+        valid_direction = possible_directions(column, row)
+        user_input = input("Direction: ")
+        column, row = position(user_input, column, row)
+
+
