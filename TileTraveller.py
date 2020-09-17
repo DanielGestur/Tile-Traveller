@@ -36,10 +36,12 @@ def possible_directions():
             print("(W)est")
     return possible_directions
 
-def direction()
-
+def direction():
+    pass
+        
 def position():
     pass
 
 def victory():
     pass
+
