@@ -17,28 +17,33 @@
 # Þegar komið er á reit 3,1 prentast út "Victory!" og forrit klárast.
 # Input frá leikmanni getur verið bæði hástafur eða lágstafur
 
-def first_location():
-    location = (1,1)
-    return location
+# def first_location():
+#     location = (1,1)
+#     return location
 
-def possible_directions():
-    if position() == (1,1) or (2,1) or (3,1) or (1,2) or (3,2):
-        if direction() == "n" or "N":
-            print("(N)orth")
-    elif position() == (1,2) or (2,2) or (3,2) or (1,3) or (3,3):
-        if direction() == "s" or "S":
-            print("(S)outh")
-    elif position() == (1,3) or (3,2) or (1,2):
-        if direction() == "e" or "E":
-            print("(E)ast")
-    elif position() == (3,3) or (2,3) or (2,2):
-        if direction() == "w" or "W":
-            print("(W)est")
-    return possible_directions
+def possible_directions(col, row):
+    if col == 1 and row == 1:   # (1,1)
+        valid_directions = NORTH
+    elif col == 1 and row == 2: # (1,2)
+        valid_directions = NORTH+EAST+SOUTH
+    elif col == 1 and row == 3: # (1,3)
+        valid_directions = EAST+SOUTH
+    elif col == 2 and row == 1: # (2,1)
+        valid_directions = NORTH
+    elif col == 2 and row == 2: # (2,2)
+        valid_directions = SOUTH+WEST
+    elif col == 2 and row == 3: # (2,3)
+        valid_directions = EAST+WEST
+    elif col == 3 and row == 2: # (3,2)
+        valid_directions = NORTH+SOUTH
+    elif col == 3 and row == 3: # (3,3)
+        valid_directions = SOUTH+WEST
+    return valid_directions
 
 def direction():
-    pass
-        
+    direction_input = input("Directions: ")
+    return direction_input
+
 def position():
     pass
 
