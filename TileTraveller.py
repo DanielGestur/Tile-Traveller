@@ -17,10 +17,10 @@
 # Þegar komið er á reit 3,1 prentast út "Victory!" og forrit klárast.
 # Input frá leikmanni getur verið bæði hástafur eða lágstafur
 
-NORTH = "n"
-EAST = "e"
-SOUTH = "s"
-WEST = "w"
+NORTH = "n" or "N"
+EAST = "e" or "E"
+SOUTH = "s" or "S"
+WEST = "w" or "W"
 
 
 def possible_directions(col, row):
@@ -52,5 +52,5 @@ def position():
 def victory():
     pass
 
-while not victory():
-    location = (1,1)
+# while not victory():
+#     location = (1,1)
