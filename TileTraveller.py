@@ -21,38 +21,38 @@ NORTH = "n" or "N"
 EAST = "e" or "E"
 SOUTH = "s" or "S"
 WEST = "w" or "W"
+# Column + row make one tile, our first tile is (1,1)
 column = 1
 row = 1
 
 def possible_directions(column, row):
+    # Check the position of the player and print out the valid direction that the player can go.
     if column == 1 and row == 1:
         valid_directions = NORTH
-        print("You can travel: (N)orth")
+        print("You can travel: (N)orth.")
     elif column == 1 and row == 2:
         valid_directions = NORTH+EAST+SOUTH
-        print("You can travel: (N)orht or (E)ast or (S)outh")
+        print("You can travel: (N)orht or (E)ast or (S)outh.")
     elif column == 1 and row == 3:
         valid_directions = EAST+SOUTH
-        print("You can travel: (E)ast or (S)outh")
+        print("You can travel: (E)ast or (S)outh.")
     elif column == 2 and row == 1: 
         valid_directions = NORTH
-        print("You can travel: (N)orth")
+        print("You can travel: (N)orth.")
     elif column == 2 and row == 2: 
         valid_directions = SOUTH+WEST
-        print("You can travel: (S)outh or (W)est")
+        print("You can travel: (S)outh or (W)est.")
     elif column == 2 and row == 3: 
         valid_directions = EAST+WEST
-        print("You can travel: (E)ast or (W)est")
+        print("You can travel: (E)ast or (W)est.")
     elif column == 3 and row == 2: 
         valid_directions = NORTH+SOUTH
-        print("You can travel: (N)orth or (S)outh")
+        print("You can travel: (N)orth or (S)outh.")
     elif column == 3 and row == 3: 
         valid_directions = SOUTH+WEST
-        print("You can travel: (S)outh or (W)est")
+        print("You can travel: (S)outh or (W)est.")
     return valid_directions
 
-# def print_available_directions(location):
-#     print("You can travel: ", end="")
 
 def position():
     if user_input == NORTH:
@@ -65,7 +65,8 @@ def position():
         row -= 1
 
 def victory():
-    pass
+    if column == 3 and row == 1:
+        print("Victory!")
 
 possible_directions(column, row)
 user_input = input("Direction: ")
