@@ -15,3 +15,15 @@
 # í upphafi þarf að prenta út í hvaða átt er hægt að fara "You can travel: (N)orth".
 # Ef hreyfing er ekki möguleg á að prentast út "Not a valid direction!" og biðja um nýja átt
 # Þegar komið er á reit 3,1 prentast út "Victory!" og forrit klárast.
+
+def first_location():
+    pass
+
+def possible_directions():
+    pass
+
+def position():
+    pass
+
+def victory():
+    pass
