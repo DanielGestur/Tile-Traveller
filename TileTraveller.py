@@ -21,10 +21,12 @@ NORTH = "n" or "N"
 EAST = "e" or "E"
 SOUTH = "s" or "S"
 WEST = "w" or "W"
+# Column + row make one tile, our first tile is (1,1)
 column = 1
 row = 1
 
 def possible_directions(column, row):
+    # Check the position of the player and print out the valid direction that the player can go.
     if column == 1 and row == 1:
         valid_directions = NORTH
         print("You can travel: (N)orth.")
