@@ -81,24 +81,16 @@ def victory(column, row):
         print("Victory!")
         return victory_
 
-# def victory(victory):
-#     if column == 3 and row == 1:
-#         victory = True
-#         print("Victory!")
-#     else:
-#         victory = False    
-#     return victory      
+    
 column = 1
 row = 1
-# if victory == True:
-#     victory(column, row)
-#     victory = False
 victory_ = False
-while victory_ != True:
+
+while victory(column,row) != True:
+
     valid_directions = possible_directions(column, row)
     user_input = input("Direction: ")
-    #print(valid_directions)
     column, row = position(user_input, column, row)
-    victory(column, row)
+    
     
 
