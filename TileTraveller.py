@@ -18,10 +18,10 @@
 # Input frá leikmanni getur verið bæði hástafur eða lágstafur
 # https://github.com/DanielGestur/Tile-Traveller/blob/master/TileTraveller.py
 
-NORTH = "n" or "N"
-EAST = "e" or "E"
-SOUTH = "s" or "S"
-WEST = "w" or "W"
+NORTH = "n"
+EAST = "e"
+SOUTH = "s"
+WEST = "w"
 # Column + row make one tile, our first tile is (1,1)
 
 def possible_directions(column, row):
@@ -77,30 +77,22 @@ def victory(column, row):
         victory_ = True
         print("Victory!")
         return victory_
-<<<<<<< HEAD
     
 column = 1
 row = 1
 
-=======
-
-    
-column = 1
-row = 1
->>>>>>> 435f4929c59413d46c0389d12dca70f93f15d5d0
 victory_ = False
 
 while victory(column,row) != True:
 
     valid_directions = possible_directions(column, row)
     user_input = input("Direction: ")
+    user_input = user_input.lower()
     column, row = position(user_input, column, row)
-<<<<<<< HEAD
-    victory(column, row)
     if (column == 3) and (row == 1):
         victory_ = True
-=======
-    
->>>>>>> 435f4929c59413d46c0389d12dca70f93f15d5d0
+    else:
+        victory(column, row)
+
     
 
