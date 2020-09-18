@@ -30,7 +30,6 @@ WEST = "w" or "W"
 def possible_directions(column, row):
     ''' Check the position of the player and print out the valid direction that the player can go. '''
   
-    
     if column == 1 and row == 1 :
         valid_directions = NORTH
         print("You can travel: (N)orth.")
@@ -56,16 +55,10 @@ def possible_directions(column, row):
         valid_directions = SOUTH + WEST
         print("You can travel: (S)outh or (W)est.")
     elif column == 3 and row == 1: 
-        valid_directions = EAST + WEST
-        victory = True
-        return victory
+        valid_directions = NORTH
     return valid_directions
 
-<<<<<<< HEAD
 def position(direction, column, row):
-=======
-def position(user_input, column, row,valid_directions):
->>>>>>> f37cea6189d169e6044213cef332b549019609ec
     ''' Changes the player position after play is chosen '''
 
     if user_input in valid_directions:  
@@ -77,7 +70,6 @@ def position(user_input, column, row,valid_directions):
         column -= 1
      elif user_input == SOUTH:
         row -= 1
-<<<<<<< HEAD
     else:
         print("Not a valid direction!")
     return(column, row)
@@ -85,62 +77,28 @@ def position(user_input, column, row,valid_directions):
 def victory(column, row):
     ''' The player has won the game '''
     if column == 3 and row == 1:
+        victory_ = True
         print("Victory!")
-=======
-     return column ,row    
-      
-    if user_input != valid_directions:
-        print("Not a valid direction!") 
-        if row > 3 or row < 1: 
-            if row > 3: 
-              row -= 1 
-            if row < 1: 
-              row += 1   
-            return column ,row
-        else: 
-         return column ,row
-        if column > 3 or column < 1: 
-            if column > 3:
-              column -= 1 
-            if column < 1: 
-              column += 1    
-            return column ,row
-        else: 
-         return column ,row
-       
->>>>>>> f37cea6189d169e6044213cef332b549019609ec
+        return victory_
 
-def victory(victory):
-    if column == 3 and row == 1:
-        victory = True
-        print("Victory!")
-    else:
-        victory = False    
-    return victory      
+# def victory(victory):
+#     if column == 3 and row == 1:
+#         victory = True
+#         print("Victory!")
+#     else:
+#         victory = False    
+#     return victory      
 column = 1
 row = 1
-<<<<<<< HEAD
-
-while victory != True:
+# if victory == True:
+#     victory(column, row)
+#     victory = False
+victory_ = False
+while victory_ != True:
     valid_directions = possible_directions(column, row)
     user_input = input("Direction: ")
     #print(valid_directions)
-    column, row =position(user_input, column, row)
-    
-if victory == True:
+    column, row = position(user_input, column, row)
     victory(column, row)
-=======
+    
 
-# valid_directions = NORTH
-# possible_directions(column, row)
-
-
-while victory(victory) != True:
-    print(column,row)
-    valid_directions = possible_directions(column, row)
-    user_input = input("Direction: ")
-    column ,row= position(user_input, column, row,valid_directions)
-        
-
-
->>>>>>> f37cea6189d169e6044213cef332b549019609ec
