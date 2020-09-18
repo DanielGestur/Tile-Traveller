@@ -77,17 +77,30 @@ def victory(column, row):
         victory_ = True
         print("Victory!")
         return victory_
+<<<<<<< HEAD
     
 column = 1
 row = 1
 
+=======
+
+    
+column = 1
+row = 1
+>>>>>>> 435f4929c59413d46c0389d12dca70f93f15d5d0
 victory_ = False
-while victory_ != True:
+
+while victory(column,row) != True:
+
     valid_directions = possible_directions(column, row)
     user_input = input("Direction: ")
     column, row = position(user_input, column, row)
+<<<<<<< HEAD
     victory(column, row)
     if (column == 3) and (row == 1):
         victory_ = True
+=======
+    
+>>>>>>> 435f4929c59413d46c0389d12dca70f93f15d5d0
     
 
