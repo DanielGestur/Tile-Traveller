@@ -80,6 +80,7 @@ victory = False
 
 
 while not victory:
+    
     if victory == True:
         print(victory)
     else:
