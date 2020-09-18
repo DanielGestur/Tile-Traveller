@@ -1,4 +1,3 @@
-
 # Markmið að komast á reit 3,1
 # Gera fall fyrir reiti
 
@@ -74,14 +73,11 @@ def position(direction, column, row):
 def victory(column, row):
     ''' The player has won the game '''
     if column == 3 and row == 1:
-        victory_ = True
         print("Victory!")
-        return victory_
+        return True
     
 column = 1
 row = 1
-
-victory_ = False
 
 while victory(column,row) != True:
 
@@ -89,10 +85,3 @@ while victory(column,row) != True:
     user_input = input("Direction: ")
     user_input = user_input.lower()
     column, row = position(user_input, column, row)
-    if (column == 3) and (row == 1):
-        victory_ = True
-    else:
-        victory(column, row)
-
-    
-
